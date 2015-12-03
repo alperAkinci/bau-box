@@ -4,6 +4,5 @@
 
 
 
-#import "AWSCore.h"
-#import "S3.h"
-#import "stdint.h"
+#import <AWSCore/AWSCore.h>
+#import <AWSCognito/AWSCognito.h>
