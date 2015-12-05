@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--My Meals-->
+        <!--BAUBox-->
         <scene sceneID="2Fy-L7-daY">
             <objects>
                 <tableViewController id="CGE-8Q-71t" customClass="MealTableViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <outlet property="delegate" destination="CGE-8Q-71t" id="dwc-1z-waU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Meals" id="j5j-Pg-5z2">
+                    <navigationItem key="navigationItem" title="BAUBox" id="j5j-Pg-5z2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VRG-fl-Qrj">
                             <connections>
                                 <segue destination="Fkp-K9-KDa" kind="presentation" identifier="AddItem" id="NKE-yv-eGS"/>
@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="281" y="337"/>
         </scene>
-        <!--New Meal-->
+        <!--BAUBox-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,13 +110,13 @@
                             <constraint firstItem="6CW-NK-mGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hU0-oR-URX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Meal" id="eBS-yJ-lAP">
+                    <navigationItem key="navigationItem" title="BAUBox" id="eBS-yJ-lAP">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FiY-ri-FJR">
                             <connections>
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="oGJ-db-sJQ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="3m4-wt-nCw">
+                        <barButtonItem key="rightBarButtonItem" title="Upload" id="3m4-wt-nCw">
                             <connections>
                                 <segue destination="8tj-JD-Adh" kind="unwind" unwindAction="unwindToMealList:" id="dDo-qz-LJQ"/>
                             </connections>
