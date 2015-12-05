@@ -19,18 +19,7 @@ class MealTableViewController: UITableViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
-        // Initialize the Cognito Sync client
-        let syncClient = AWSCognito.defaultCognito()
-        
-        // Create a record in a dataset and synchronize with the server
-        let dataset = syncClient.openOrCreateDataset("myDataset")
-        dataset.setString("myValue", forKey:"myKey")
-        dataset.synchronize().continueWithBlock {(task: AWSTask!) -> AnyObject! in
-            // Your handler code here
-            return nil
-            
-        }
+
 
          //the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.leftBarButtonItem = self.editButtonItem()
