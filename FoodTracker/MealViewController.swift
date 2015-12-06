@@ -28,15 +28,15 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
     var progressLabel:UILabel?
     
     var uploadRequest:AWSS3TransferManagerUploadRequest?
-    var filesize:Int64 = 0
-    var amountUploaded:Int64 = 0
+    //    var filesize:Int64 = 0
+    //    var amountUploaded:Int64 = 0
     
     //MARK:Properties
     
     var meal: Meal?
     
     //image count number
-    var count : Int?
+    //var count : Int?
 
     
     
@@ -187,13 +187,11 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
     func uploadToS3(){
         
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
-        
         // get the image
         let img:UIImage = photoImageView!.image!
         
         
         // create a local image that we can use to upload to s3
-        
         
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         let fileURL = documentsURL.URLByAppendingPathComponent("\(nameTextField.text!).jpg")
@@ -215,24 +213,46 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
         // set the image's name that will be used on the s3 server. I am also creating a folder to place the image in
         uploadRequest?.key = "\(nameTextField.text!).jpg"
         // set the content type
-        //uploadRequest?.contentType = "imagename/jpg"
+        //uploadRequest?.contentType = "\(nameTextField.text!)/jpg"
         // and finally set the body to the local file path
         uploadRequest?.body = url
-        
-        
+ 
+       
+     
         let task = transferManager.upload(uploadRequest)
         task.continueWithBlock { (task) -> AnyObject! in
             if task.error != nil {
                 print("Error: \(task.error)")
             } else {
                 print("Upload successful")
+                
+                
             }
             return nil
+
         }
         
        
-    
+        
     }// end of UploadToS3
+
+    
+    //MARK: Loading Views
+    
+    
+    func displayUploadingAlert(){
+    
+        let title = "Uploading"
+        let message = "Successful!"
+        let okText = "OK"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let okayButton = UIAlertAction(title: okText, style: UIAlertActionStyle.Default, handler: nil)
+        
+        alert.addAction(okayButton)
+        
+        self.presentViewController(alert, animated: true, completion : nil)
+    }
 
 }
 
