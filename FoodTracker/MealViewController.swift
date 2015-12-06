@@ -34,6 +34,9 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
     //MARK:Properties
     
     var meal: Meal?
+    
+    //image count number
+    var count : Int?
 
     
     
@@ -188,9 +191,12 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
         // get the image
         let img:UIImage = photoImageView!.image!
         
+        
         // create a local image that we can use to upload to s3
+        
+        
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        let fileURL = documentsURL.URLByAppendingPathComponent("zzz.jpg")
+        let fileURL = documentsURL.URLByAppendingPathComponent("\(nameTextField.text!)\(count!).jpg")
         
         let path = fileURL.path!
         let imageData = UIImageJPEGRepresentation(img, 0.5)!
@@ -199,14 +205,15 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
         // once the image is saved we can use the path to create a local fileurl
         let url:NSURL = NSURL(fileURLWithPath: path as String)
         print(url)
+        
         // next we set up the S3 upload request manager
         uploadRequest = AWSS3TransferManagerUploadRequest()
         // set the bucket
-        uploadRequest?.bucket = "s3-demo-swift271"
+        uploadRequest?.bucket = "my-s3-baubox-storage"
         // I want this image to be public to anyone to view it so I'm setting it to Public Read
         uploadRequest?.ACL = AWSS3ObjectCannedACL.PublicRead
         // set the image's name that will be used on the s3 server. I am also creating a folder to place the image in
-        uploadRequest?.key = "foldername/zzz.jpg"
+        uploadRequest?.key = "\(nameTextField.text!)\(count!).jpg"
         // set the content type
         //uploadRequest?.contentType = "zzz/jpg"
         // and finally set the body to the local file path
@@ -225,8 +232,7 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
             return nil
         }
         
-    
-
+       
     
 }// end of UploadToS3
 

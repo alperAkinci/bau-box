@@ -25,7 +25,7 @@ class MealTableViewController: UITableViewController {
          self.navigationItem.leftBarButtonItem = self.editButtonItem()
     
         //Load the sample data
-        loadSampleMeals()
+        //loadSampleMeals()
     }
     
     func loadSampleMeals(){
@@ -144,6 +144,19 @@ class MealTableViewController: UITableViewController {
         
             else if segue.identifier == "AddItem"{
             print("Adding new meal.")
+                
+            
+                let controller = segue.destinationViewController as! MealViewController
+                
+                print(meals.count)
+                controller.count = meals.count
+                
+                
+                
+            
+            
+            
+            
         }
     }
     

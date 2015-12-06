@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--BAUBox-->
+        <!--My BAUBox-->
         <scene sceneID="2Fy-L7-daY">
             <objects>
                 <tableViewController id="CGE-8Q-71t" customClass="MealTableViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,10 +50,10 @@
                             <outlet property="delegate" destination="CGE-8Q-71t" id="dwc-1z-waU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="BAUBox" id="j5j-Pg-5z2">
+                    <navigationItem key="navigationItem" title="My BAUBox" id="j5j-Pg-5z2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VRG-fl-Qrj">
                             <connections>
-                                <segue destination="Fkp-K9-KDa" kind="presentation" identifier="AddItem" id="NKE-yv-eGS"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddItem" id="2Q6-TN-dyw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="281" y="337"/>
         </scene>
-        <!--BAUBox-->
+        <!--BAUBox Photo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6CW-NK-mGa">
                                 <rect key="frame" x="20" y="80" width="560" height="418"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-rX-iHd">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter photo name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-rX-iHd">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -110,7 +110,7 @@
                             <constraint firstItem="6CW-NK-mGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hU0-oR-URX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BAUBox" id="eBS-yJ-lAP">
+                    <navigationItem key="navigationItem" title="BAUBox Photo" id="eBS-yJ-lAP">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FiY-ri-FJR">
                             <connections>
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="oGJ-db-sJQ"/>
@@ -137,7 +137,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1902" y="337"/>
+            <point key="canvasLocation" x="1214" y="337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4FE-vT-MRW">
@@ -157,29 +157,11 @@
             </objects>
             <point key="canvasLocation" x="-471" y="337"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="v3S-Wb-0xC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fkp-K9-KDa" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4WI-mp-jw2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0bZ-JX-N0c"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pa2-9s-o0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1104" y="791"/>
-        </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="trb-6E-Tll"/>
+        <segue reference="2Q6-TN-dyw"/>
     </inferredMetricsTieBreakers>
 </document>
