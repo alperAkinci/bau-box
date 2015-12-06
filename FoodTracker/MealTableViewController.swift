@@ -12,6 +12,7 @@ class MealTableViewController: UITableViewController {
     
     //MARK:Properties
     
+    var deleteRequest:AWSS3DeleteObjectRequest?
     var meals = [Meal]()
     
     override func viewDidLoad() {
@@ -93,9 +94,16 @@ class MealTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
+            
+            
+            //Delete image from S3
+            deleteFromS3Bucket(indexPath)
+          
             // Delete the row from the data source
             meals.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -146,15 +154,10 @@ class MealTableViewController: UITableViewController {
             print("Adding new meal.")
                 
             
-                let controller = segue.destinationViewController as! MealViewController
-                
-                print(meals.count)
-                controller.count = meals.count
-                
-                
-                
-            
-            
+//                let controller = segue.destinationViewController as! MealViewController
+//                
+//                print(meals.count)
+//                controller.count = meals.count
             
             
         }
@@ -195,5 +198,33 @@ class MealTableViewController: UITableViewController {
         }//end if
     
     }//end func
+    
+    
+    //MARK: S3 delete stuff
+    func deleteFromS3Bucket(indexPath: NSIndexPath){
+        
+        let S3 = AWSS3.defaultS3()
+        deleteRequest = AWSS3DeleteObjectRequest()
+        
+        deleteRequest?.bucket = "my-s3-baubox-storage"
+        
+        let meal = meals[indexPath.row]
+        
+        let deleteImage = "\(meal.name).jpg"
+        deleteRequest?.key = deleteImage
+        
+        
+        let task = S3.deleteObject(deleteRequest)
+        task.continueWithBlock { (task) -> AnyObject! in
+            if task.error != nil {
+                print("Error: \(task.error)")
+            } else {
+                print("Delete successful")
+            }
+            return nil
+        }
+        
+    
+    }
 
 }//end class

@@ -183,7 +183,7 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
     
     
     
-    //MARK: S3 stuff
+    //MARK: S3 upload stuff
     func uploadToS3(){
         
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
@@ -196,7 +196,7 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
         
         
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        let fileURL = documentsURL.URLByAppendingPathComponent("\(nameTextField.text!)\(count!).jpg")
+        let fileURL = documentsURL.URLByAppendingPathComponent("\(nameTextField.text!).jpg")
         
         let path = fileURL.path!
         let imageData = UIImageJPEGRepresentation(img, 0.5)!
@@ -213,13 +213,11 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
         // I want this image to be public to anyone to view it so I'm setting it to Public Read
         uploadRequest?.ACL = AWSS3ObjectCannedACL.PublicRead
         // set the image's name that will be used on the s3 server. I am also creating a folder to place the image in
-        uploadRequest?.key = "\(nameTextField.text!)\(count!).jpg"
+        uploadRequest?.key = "\(nameTextField.text!).jpg"
         // set the content type
-        //uploadRequest?.contentType = "zzz/jpg"
+        //uploadRequest?.contentType = "imagename/jpg"
         // and finally set the body to the local file path
         uploadRequest?.body = url
-        
-        
         
         
         let task = transferManager.upload(uploadRequest)
@@ -234,7 +232,7 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
         
        
     
-}// end of UploadToS3
+    }// end of UploadToS3
 
 }
 
