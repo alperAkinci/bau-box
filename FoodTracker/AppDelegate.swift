@@ -17,12 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
+        // your identityPoolId must be at us-east-1 region
+        var identityPoolId = "************"
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
-            identityPoolId:"us-east-1:28eaa58e-fab1-4f8f-9bb5-3ab3f7cd669e")
+            identityPoolId:identityPoolId)
         
         let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
         

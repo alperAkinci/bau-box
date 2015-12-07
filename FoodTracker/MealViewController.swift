@@ -147,6 +147,8 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
                     
                     // Set the meal to be passed to MealTableViewController after the unwind segue.
                     meal = Meal(name: name , photo: photo, rating: rating)
+                    
+                    
                     //This code configures the meal property with the appropriate values before segue executes.
                     
             }
@@ -184,8 +186,16 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
     
     
     //MARK: S3 upload stuff
+    
+    // WARNING!
+    // Please create in your AWS S3 bucket named "my-s3-baubox-storage" before
+    // using this func otherwise it doesnt work
+    
+    // This func uploads your selected photo to "my-s3-baubox-storage" bucket
+    // in your AWS S3 storage
     func uploadToS3(){
         
+        //
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
         // get the image
         let img:UIImage = photoImageView!.image!
