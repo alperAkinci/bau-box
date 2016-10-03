@@ -12,6 +12,7 @@ class MealTableViewController: UITableViewController {
     
     //MARK:Properties
     
+    var deleteRequest:AWSS3DeleteObjectRequest?
     var meals = [Meal]()
     
     override func viewDidLoad() {
@@ -20,27 +21,23 @@ class MealTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
+
          //the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.leftBarButtonItem = self.editButtonItem()
     
         //Load the sample data
-        loadSampleMeals()
+        //loadSampleMeals()
     }
     
     func loadSampleMeals(){
         
         let photo1 = UIImage(named: "meal1")!
-        let meal1 = Meal(name: "Karniyarik", photo: photo1, rating: 5)!
-        
-        let photo2 = UIImage(named: "meal2")!
-        let meal2 = Meal(name: "Dolma", photo: photo2, rating: 4)!
-        
-        let photo3 = UIImage(named: "meal3")!
-        let meal3 = Meal(name: "Mercimek Köftesi", photo: photo3, rating: 2)!
-        
-        meals += [ meal1 , meal2 , meal3 ]
+        let meal1 = Meal(name: "Hamburger", photo: photo1, rating: 5)!
         
         
+        meals += [ meal1 ]
+        
+
         
         
     }
@@ -92,9 +89,16 @@ class MealTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
+            
+            
+            //Delete image from S3
+            deleteFromS3Bucket(indexPath)
+          
             // Delete the row from the data source
             meals.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -143,6 +147,14 @@ class MealTableViewController: UITableViewController {
         
             else if segue.identifier == "AddItem"{
             print("Adding new meal.")
+                
+            
+//                let controller = segue.destinationViewController as! MealViewController
+//                
+//                print(meals.count)
+//                controller.count = meals.count
+            
+            
         }
     }
     
@@ -181,5 +193,33 @@ class MealTableViewController: UITableViewController {
         }//end if
     
     }//end func
+    
+    
+    //MARK: S3 delete stuff
+    func deleteFromS3Bucket(indexPath: NSIndexPath){
+        
+        let S3 = AWSS3.defaultS3()
+        deleteRequest = AWSS3DeleteObjectRequest()
+        
+        deleteRequest?.bucket = "my-s3-baubox-storage"
+        
+        let meal = meals[indexPath.row]
+        
+        let deleteImage = "\(meal.name).jpg"
+        deleteRequest?.key = deleteImage
+        
+        
+        let task = S3.deleteObject(deleteRequest)
+        task.continueWithBlock { (task) -> AnyObject! in
+            if task.error != nil {
+                print("Error: \(task.error)")
+            } else {
+                print("Delete successful")
+            }
+            return nil
+        }
+        
+    
+    }
 
 }//end class

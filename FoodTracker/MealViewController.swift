@@ -19,10 +19,24 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     //The weak keyword means that it’s possible for that property to have no value (be nil) at some point in its life.
-
+   
+    //MARK:AWS S3 properties
+    //@IBOutlet var selectedImage:UIImageView?
+    var imagePickerController:UIImagePickerController?
+    var loadingBg:UIView?
+    var progressView:UIView?
+    var progressLabel:UILabel?
+    
+    var uploadRequest:AWSS3TransferManagerUploadRequest?
+    //    var filesize:Int64 = 0
+    //    var amountUploaded:Int64 = 0
+    
     //MARK:Properties
     
     var meal: Meal?
+    
+    //image count number
+    //var count : Int?
 
     
     
@@ -123,12 +137,18 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
         //   The code below code uses the identity operator (===) to check that the object referenced by the saveButton outlet is the same object instance as sender. If it is, the if statement is executed.
         
                 if (saveButton === sender){
+                    
+                    
+                    self.uploadToS3()
+                    
                     let name = nameTextField.text ?? ""
                     let photo = photoImageView.image
                     let rating = ratingControl.rating
                     
                     // Set the meal to be passed to MealTableViewController after the unwind segue.
                     meal = Meal(name: name , photo: photo, rating: rating)
+                    
+                    
                     //This code configures the meal property with the appropriate values before segue executes.
                     
             }
@@ -162,10 +182,89 @@ class MealViewController: UIViewController , UITextFieldDelegate,UIImagePickerCo
 //            mealNameLabel.text = "Default Text"
 //    }
     
+    
+    
+    
+    //MARK: S3 upload stuff
+    
+    // WARNING!
+    // Please create in your AWS S3 bucket named "my-s3-baubox-storage" before
+    // using this func otherwise it doesnt work
+    
+    // This func uploads your selected photo to "my-s3-baubox-storage" bucket
+    // in your AWS S3 storage
+    func uploadToS3(){
         
+        //
+        let transferManager = AWSS3TransferManager.defaultS3TransferManager()
+        // get the image
+        let img:UIImage = photoImageView!.image!
+        
+        
+        // create a local image that we can use to upload to s3
+        
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent("\(nameTextField.text!).jpg")
+        
+        let path = fileURL.path!
+        let imageData = UIImageJPEGRepresentation(img, 0.5)!
+        imageData.writeToURL(fileURL, atomically: true)
+        
+        // once the image is saved we can use the path to create a local fileurl
+        let url:NSURL = NSURL(fileURLWithPath: path as String)
+        print(url)
+        
+        // next we set up the S3 upload request manager
+        uploadRequest = AWSS3TransferManagerUploadRequest()
+        // set the bucket
+        uploadRequest?.bucket = "my-s3-baubox-storage"
+        // I want this image to be public to anyone to view it so I'm setting it to Public Read
+        uploadRequest?.ACL = AWSS3ObjectCannedACL.PublicRead
+        // set the image's name that will be used on the s3 server. I am also creating a folder to place the image in
+        uploadRequest?.key = "\(nameTextField.text!).jpg"
+        // set the content type
+        //uploadRequest?.contentType = "\(nameTextField.text!)/jpg"
+        // and finally set the body to the local file path
+        uploadRequest?.body = url
+ 
+       
+     
+        let task = transferManager.upload(uploadRequest)
+        task.continueWithBlock { (task) -> AnyObject! in
+            if task.error != nil {
+                print("Error: \(task.error)")
+            } else {
+                print("Upload successful")
+                
+                
+            }
+            return nil
+
+        }
+        
+       
+        
+    }// end of UploadToS3
+
+    
+    //MARK: Loading Views
     
     
+    func displayUploadingAlert(){
+    
+        let title = "Uploading"
+        let message = "Successful!"
+        let okText = "OK"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let okayButton = UIAlertAction(title: okText, style: UIAlertActionStyle.Default, handler: nil)
+        
+        alert.addAction(okayButton)
+        
+        self.presentViewController(alert, animated: true, completion : nil)
     }
+
+}
 
 
 

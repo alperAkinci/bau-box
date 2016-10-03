@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E4A43EC1C10CAB3008BF2C6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A43EB1C10CAB3008BF2C6 /* libsqlite3.0.tbd */; };
+		4E4A43F01C10CAD0008BF2C6 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A43ED1C10CAD0008BF2C6 /* libz.1.2.5.tbd */; };
+		4E4A43F11C10CAD0008BF2C6 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A43EE1C10CAD0008BF2C6 /* libz.1.tbd */; };
+		4E4A43F21C10CAD0008BF2C6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A43EF1C10CAD0008BF2C6 /* libz.tbd */; };
+		4E4A43F41C10CAE3008BF2C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A43F31C10CAE3008BF2C6 /* SystemConfiguration.framework */; };
+		4E4A44101C11C2AA008BF2C6 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44001C11C2AA008BF2C6 /* AWSAPIGateway.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44111C11C2AA008BF2C6 /* AWSAutoScaling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44011C11C2AA008BF2C6 /* AWSAutoScaling.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44121C11C2AA008BF2C6 /* AWSCloudWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44021C11C2AA008BF2C6 /* AWSCloudWatch.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44131C11C2AA008BF2C6 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44031C11C2AA008BF2C6 /* AWSCore.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44141C11C2AA008BF2C6 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44041C11C2AA008BF2C6 /* AWSDynamoDB.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44151C11C2AA008BF2C6 /* AWSEC2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44051C11C2AA008BF2C6 /* AWSEC2.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44161C11C2AA008BF2C6 /* AWSElasticLoadBalancing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44061C11C2AA008BF2C6 /* AWSElasticLoadBalancing.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44171C11C2AA008BF2C6 /* AWSKinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44071C11C2AA008BF2C6 /* AWSKinesis.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44181C11C2AA008BF2C6 /* AWSLambda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44081C11C2AA008BF2C6 /* AWSLambda.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44191C11C2AA008BF2C6 /* AWSMachineLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44091C11C2AA008BF2C6 /* AWSMachineLearning.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A441A1C11C2AA008BF2C6 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A440A1C11C2AA008BF2C6 /* AWSMobileAnalytics.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A441B1C11C2AA008BF2C6 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A440B1C11C2AA008BF2C6 /* AWSS3.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A441C1C11C2AA008BF2C6 /* AWSSES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A440C1C11C2AA008BF2C6 /* AWSSES.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A441D1C11C2AA008BF2C6 /* AWSSimpleDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A440D1C11C2AA008BF2C6 /* AWSSimpleDB.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A441E1C11C2AA008BF2C6 /* AWSSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A440E1C11C2AA008BF2C6 /* AWSSNS.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A441F1C11C2AA008BF2C6 /* AWSSQS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A440F1C11C2AA008BF2C6 /* AWSSQS.framework */; settings = {ASSET_TAGS = (); }; };
+		4E4A44281C11C47D008BF2C6 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4A44271C11C47D008BF2C6 /* AWSCognito.framework */; settings = {ASSET_TAGS = (); }; };
+		4EADE9131BDBCE580092CF95 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADE9121BDBCE580092CF95 /* RatingControl.swift */; settings = {ASSET_TAGS = (); }; };
+		4EADE9151BDD27020092CF95 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADE9141BDD27020092CF95 /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
+		4EADE9161BDD27020092CF95 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADE9141BDD27020092CF95 /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
+		4EADE9181BDE3D420092CF95 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADE9171BDE3D420092CF95 /* MealTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		4EADE91B1BE01FA60092CF95 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADE91A1BE01FA60092CF95 /* MealTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CA1902E01B10E523000271C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1902DF1B10E523000271C4 /* AppDelegate.swift */; };
+		CA1902E21B10E523000271C4 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1902E11B10E523000271C4 /* MealViewController.swift */; };
+		CA1902E51B10E523000271C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1902E31B10E523000271C4 /* Main.storyboard */; };
+		CA1902E71B10E523000271C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1902E61B10E523000271C4 /* Assets.xcassets */; };
+		CA1902EA1B10E523000271C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1902E81B10E523000271C4 /* LaunchScreen.storyboard */; };
+		CA1902F51B10E523000271C4 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1902F41B10E523000271C4 /* FoodTrackerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA1902F11B10E523000271C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA1902D41B10E523000271C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1902DB1B10E523000271C4;
+			remoteInfo = FoodTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E4A43EB1C10CAB3008BF2C6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		4E4A43ED1C10CAD0008BF2C6 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		4E4A43EE1C10CAD0008BF2C6 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		4E4A43EF1C10CAD0008BF2C6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4E4A43F31C10CAE3008BF2C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4E4A44001C11C2AA008BF2C6 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAPIGateway.framework; sourceTree = "<group>"; };
+		4E4A44011C11C2AA008BF2C6 /* AWSAutoScaling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAutoScaling.framework; sourceTree = "<group>"; };
+		4E4A44021C11C2AA008BF2C6 /* AWSCloudWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCloudWatch.framework; sourceTree = "<group>"; };
+		4E4A44031C11C2AA008BF2C6 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		4E4A44041C11C2AA008BF2C6 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
+		4E4A44051C11C2AA008BF2C6 /* AWSEC2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSEC2.framework; sourceTree = "<group>"; };
+		4E4A44061C11C2AA008BF2C6 /* AWSElasticLoadBalancing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSElasticLoadBalancing.framework; sourceTree = "<group>"; };
+		4E4A44071C11C2AA008BF2C6 /* AWSKinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSKinesis.framework; sourceTree = "<group>"; };
+		4E4A44081C11C2AA008BF2C6 /* AWSLambda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSLambda.framework; sourceTree = "<group>"; };
+		4E4A44091C11C2AA008BF2C6 /* AWSMachineLearning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMachineLearning.framework; sourceTree = "<group>"; };
+		4E4A440A1C11C2AA008BF2C6 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileAnalytics.framework; sourceTree = "<group>"; };
+		4E4A440B1C11C2AA008BF2C6 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
+		4E4A440C1C11C2AA008BF2C6 /* AWSSES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSES.framework; sourceTree = "<group>"; };
+		4E4A440D1C11C2AA008BF2C6 /* AWSSimpleDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSimpleDB.framework; sourceTree = "<group>"; };
+		4E4A440E1C11C2AA008BF2C6 /* AWSSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSNS.framework; sourceTree = "<group>"; };
+		4E4A440F1C11C2AA008BF2C6 /* AWSSQS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSQS.framework; sourceTree = "<group>"; };
+		4E4A44231C11C315008BF2C6 /* FoodTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E4A44271C11C47D008BF2C6 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognito.framework; sourceTree = "<group>"; };
+		4EADE9121BDBCE580092CF95 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		4EADE9141BDD27020092CF95 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		4EADE9171BDE3D420092CF95 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		4EADE91A1BE01FA60092CF95 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		CA1902DC1B10E523000271C4 /* BAUBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAUBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1902DF1B10E523000271C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA1902E11B10E523000271C4 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		CA1902E41B10E523000271C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA1902E61B10E523000271C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA1902E91B10E523000271C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA1902EB1B10E523000271C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1902F01B10E523000271C4 /* BAUBox.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAUBox.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1902F41B10E523000271C4 /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
+		CA1902F61B10E523000271C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA1902D91B10E523000271C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E4A44101C11C2AA008BF2C6 /* AWSAPIGateway.framework in Frameworks */,
+				4E4A441B1C11C2AA008BF2C6 /* AWSS3.framework in Frameworks */,
+				4E4A44171C11C2AA008BF2C6 /* AWSKinesis.framework in Frameworks */,
+				4E4A43F41C10CAE3008BF2C6 /* SystemConfiguration.framework in Frameworks */,
+				4E4A441A1C11C2AA008BF2C6 /* AWSMobileAnalytics.framework in Frameworks */,
+				4E4A44151C11C2AA008BF2C6 /* AWSEC2.framework in Frameworks */,
+				4E4A44281C11C47D008BF2C6 /* AWSCognito.framework in Frameworks */,
+				4E4A44111C11C2AA008BF2C6 /* AWSAutoScaling.framework in Frameworks */,
+				4E4A441D1C11C2AA008BF2C6 /* AWSSimpleDB.framework in Frameworks */,
+				4E4A44181C11C2AA008BF2C6 /* AWSLambda.framework in Frameworks */,
+				4E4A44161C11C2AA008BF2C6 /* AWSElasticLoadBalancing.framework in Frameworks */,
+				4E4A43F01C10CAD0008BF2C6 /* libz.1.2.5.tbd in Frameworks */,
+				4E4A441E1C11C2AA008BF2C6 /* AWSSNS.framework in Frameworks */,
+				4E4A44141C11C2AA008BF2C6 /* AWSDynamoDB.framework in Frameworks */,
+				4E4A441F1C11C2AA008BF2C6 /* AWSSQS.framework in Frameworks */,
+				4E4A44121C11C2AA008BF2C6 /* AWSCloudWatch.framework in Frameworks */,
+				4E4A43F11C10CAD0008BF2C6 /* libz.1.tbd in Frameworks */,
+				4E4A43F21C10CAD0008BF2C6 /* libz.tbd in Frameworks */,
+				4E4A441C1C11C2AA008BF2C6 /* AWSSES.framework in Frameworks */,
+				4E4A43EC1C10CAB3008BF2C6 /* libsqlite3.0.tbd in Frameworks */,
+				4E4A44191C11C2AA008BF2C6 /* AWSMachineLearning.framework in Frameworks */,
+				4E4A44131C11C2AA008BF2C6 /* AWSCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1902ED1B10E523000271C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E4A43C61C10C9E7008BF2C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E4A44271C11C47D008BF2C6 /* AWSCognito.framework */,
+				4E4A44001C11C2AA008BF2C6 /* AWSAPIGateway.framework */,
+				4E4A44011C11C2AA008BF2C6 /* AWSAutoScaling.framework */,
+				4E4A44021C11C2AA008BF2C6 /* AWSCloudWatch.framework */,
+				4E4A44031C11C2AA008BF2C6 /* AWSCore.framework */,
+				4E4A44041C11C2AA008BF2C6 /* AWSDynamoDB.framework */,
+				4E4A44051C11C2AA008BF2C6 /* AWSEC2.framework */,
+				4E4A44061C11C2AA008BF2C6 /* AWSElasticLoadBalancing.framework */,
+				4E4A44071C11C2AA008BF2C6 /* AWSKinesis.framework */,
+				4E4A44081C11C2AA008BF2C6 /* AWSLambda.framework */,
+				4E4A44091C11C2AA008BF2C6 /* AWSMachineLearning.framework */,
+				4E4A440A1C11C2AA008BF2C6 /* AWSMobileAnalytics.framework */,
+				4E4A440B1C11C2AA008BF2C6 /* AWSS3.framework */,
+				4E4A440C1C11C2AA008BF2C6 /* AWSSES.framework */,
+				4E4A440D1C11C2AA008BF2C6 /* AWSSimpleDB.framework */,
+				4E4A440E1C11C2AA008BF2C6 /* AWSSNS.framework */,
+				4E4A440F1C11C2AA008BF2C6 /* AWSSQS.framework */,
+			);
+			name = Frameworks;
+			path = FoodTracker;
+			sourceTree = "<group>";
+		};
+		CA1902D31B10E523000271C4 = {
+			isa = PBXGroup;
+			children = (
+				4E4A43F31C10CAE3008BF2C6 /* SystemConfiguration.framework */,
+				4E4A43ED1C10CAD0008BF2C6 /* libz.1.2.5.tbd */,
+				4E4A43EE1C10CAD0008BF2C6 /* libz.1.tbd */,
+				4E4A43EF1C10CAD0008BF2C6 /* libz.tbd */,
+				4E4A43EB1C10CAB3008BF2C6 /* libsqlite3.0.tbd */,
+				CA1902DE1B10E523000271C4 /* BAUBox */,
+				CA1902F31B10E523000271C4 /* FoodTrackerTests */,
+				CA1902DD1B10E523000271C4 /* Products */,
+				4E4A43C61C10C9E7008BF2C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CA1902DD1B10E523000271C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA1902DC1B10E523000271C4 /* BAUBox.app */,
+				CA1902F01B10E523000271C4 /* BAUBox.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA1902DE1B10E523000271C4 /* BAUBox */ = {
+			isa = PBXGroup;
+			children = (
+				CA1902DF1B10E523000271C4 /* AppDelegate.swift */,
+				CA1902E11B10E523000271C4 /* MealViewController.swift */,
+				4EADE9121BDBCE580092CF95 /* RatingControl.swift */,
+				4EADE9141BDD27020092CF95 /* Meal.swift */,
+				CA1902E31B10E523000271C4 /* Main.storyboard */,
+				4EADE91A1BE01FA60092CF95 /* MealTableViewController.swift */,
+				4EADE9171BDE3D420092CF95 /* MealTableViewCell.swift */,
+				CA1902E61B10E523000271C4 /* Assets.xcassets */,
+				CA1902E81B10E523000271C4 /* LaunchScreen.storyboard */,
+				CA1902EB1B10E523000271C4 /* Info.plist */,
+				4E4A44231C11C315008BF2C6 /* FoodTracker-Bridging-Header.h */,
+			);
+			name = BAUBox;
+			path = FoodTracker;
+			sourceTree = "<group>";
+		};
+		CA1902F31B10E523000271C4 /* FoodTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA1902F41B10E523000271C4 /* FoodTrackerTests.swift */,
+				CA1902F61B10E523000271C4 /* Info.plist */,
+			);
+			path = FoodTrackerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA1902DB1B10E523000271C4 /* BAUBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1902F91B10E523000271C4 /* Build configuration list for PBXNativeTarget "BAUBox" */;
+			buildPhases = (
+				CA1902D81B10E523000271C4 /* Sources */,
+				CA1902D91B10E523000271C4 /* Frameworks */,
+				CA1902DA1B10E523000271C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BAUBox;
+			productName = FoodTracker;
+			productReference = CA1902DC1B10E523000271C4 /* BAUBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA1902EF1B10E523000271C4 /* BAUBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1902FC1B10E523000271C4 /* Build configuration list for PBXNativeTarget "BAUBoxTests" */;
+			buildPhases = (
+				CA1902EC1B10E523000271C4 /* Sources */,
+				CA1902ED1B10E523000271C4 /* Frameworks */,
+				CA1902EE1B10E523000271C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA1902F21B10E523000271C4 /* PBXTargetDependency */,
+			);
+			name = BAUBoxTests;
+			productName = FoodTrackerTests;
+			productReference = CA1902F01B10E523000271C4 /* BAUBox.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA1902D41B10E523000271C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Apple Inc.";
+				TargetAttributes = {
+					CA1902DB1B10E523000271C4 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					CA1902EF1B10E523000271C4 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = CA1902DB1B10E523000271C4;
+					};
+				};
+			};
+			buildConfigurationList = CA1902D71B10E523000271C4 /* Build configuration list for PBXProject "BAUBox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA1902D31B10E523000271C4;
+			productRefGroup = CA1902DD1B10E523000271C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA1902DB1B10E523000271C4 /* BAUBox */,
+				CA1902EF1B10E523000271C4 /* BAUBoxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA1902DA1B10E523000271C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1902EA1B10E523000271C4 /* LaunchScreen.storyboard in Resources */,
+				CA1902E71B10E523000271C4 /* Assets.xcassets in Resources */,
+				CA1902E51B10E523000271C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1902EE1B10E523000271C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA1902D81B10E523000271C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EADE9151BDD27020092CF95 /* Meal.swift in Sources */,
+				CA1902E21B10E523000271C4 /* MealViewController.swift in Sources */,
+				4EADE9131BDBCE580092CF95 /* RatingControl.swift in Sources */,
+				CA1902E01B10E523000271C4 /* AppDelegate.swift in Sources */,
+				4EADE91B1BE01FA60092CF95 /* MealTableViewController.swift in Sources */,
+				4EADE9181BDE3D420092CF95 /* MealTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1902EC1B10E523000271C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EADE9161BDD27020092CF95 /* Meal.swift in Sources */,
+				CA1902F51B10E523000271C4 /* FoodTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA1902F21B10E523000271C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1902DB1B10E523000271C4 /* BAUBox */;
+			targetProxy = CA1902F11B10E523000271C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA1902E31B10E523000271C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA1902E41B10E523000271C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA1902E81B10E523000271C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA1902E91B10E523000271C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA1902F71B10E523000271C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA1902F81B10E523000271C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA1902FA1B10E523000271C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FoodTracker",
+				);
+				INFOPLIST_FILE = FoodTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTracker;
+				PRODUCT_NAME = BAUBox;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodTracker/FoodTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA1902FB1B10E523000271C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FoodTracker",
+				);
+				INFOPLIST_FILE = FoodTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTracker;
+				PRODUCT_NAME = BAUBox;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodTracker/FoodTracker-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		CA1902FD1B10E523000271C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = FoodTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTrackerTests;
+				PRODUCT_NAME = BAUBox;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodTracker/FoodTrackerTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BAUBox.app/BAUBox";
+			};
+			name = Debug;
+		};
+		CA1902FE1B10E523000271C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = FoodTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTrackerTests;
+				PRODUCT_NAME = BAUBox;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodTracker/FoodTrackerTests-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BAUBox.app/BAUBox";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA1902D71B10E523000271C4 /* Build configuration list for PBXProject "BAUBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1902F71B10E523000271C4 /* Debug */,
+				CA1902F81B10E523000271C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1902F91B10E523000271C4 /* Build configuration list for PBXNativeTarget "BAUBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1902FA1B10E523000271C4 /* Debug */,
+				CA1902FB1B10E523000271C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1902FC1B10E523000271C4 /* Build configuration list for PBXNativeTarget "BAUBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1902FD1B10E523000271C4 /* Debug */,
+				CA1902FE1B10E523000271C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA1902D41B10E523000271C4 /* Project object */;
+}
