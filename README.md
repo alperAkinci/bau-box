@@ -1,5 +1,5 @@
 
-BAUBox 1.0 
+BauBox 1.0 
 ----------
 Swift 2.0
 This is my learning material adopted by Apple's FoodTracker App Tutorial and combined with AWS Mobile SDK.
