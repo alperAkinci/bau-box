@@ -3,6 +3,7 @@ BAUBox 1.0
 ----------
 Swift 2.0
 This is my learning material adopted by Apple's FoodTracker App Tutorial and combined with AWS Mobile SDK.
+
 AWS S3 integrated to Foodtracker app via Amazon Cognite
 
 Basic Funtionalities of App:
